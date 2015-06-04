@@ -71,6 +71,6 @@ module.exports = {
          mode = num;
       }
     });
-    return +mode;
+    return +mode; //
   }
 };
