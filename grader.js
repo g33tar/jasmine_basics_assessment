@@ -3,42 +3,42 @@ module.exports = {
     if(num>=98 && num<=100){
       return 'A+';
     }
-    if(num>=94 && num<=97){
+    else if(num>=94 && num<=97){
       return 'A';
     }
-    if(num>=90 && num<=93){
+    else if(num>=90 && num<=93){
       return 'A-';
     }
-    if(num>=87 && num<=89){
+    else if(num>=87 && num<=89){
       return 'B+';
     }
-    if(num>=84 && num<=86){
+    else if(num>=84 && num<=86){
       return 'B';
     }
-    if(num>=80 && num<=83){
+    else if(num>=80 && num<=83){
       return 'B-';
     }
-    if(num>=77 && num<=79){
+    else if(num>=77 && num<=79){
       return 'C+';
     }
-    if(num>=74 && num<=76){
+    else if(num>=74 && num<=76){
       return 'C';
     }
-    if(num>=70 && num<=73){
+    else if(num>=70 && num<=73){
       return 'C-';
     }
-    if(num>=67 && num<=69){
+    else if(num>=67 && num<=69){
       return 'D+';
     }
-    if(num>=64 && num<=66){
+    else if(num>=64 && num<=66){
       return 'D';
     }
-    if(num>=60 && num<=63){
+    else if(num>=60 && num<=63){
       return 'D-';
     }
-    if(num>=0 && num<=59){
+    else if(num>=0 && num<=59){
       return 'F';
-    };
+    }
   },
   avgerageScore: function(arr){
     result = 0;
@@ -52,7 +52,7 @@ module.exports = {
       return a-b;
       }
     );
-    var half = Math.floor(arr.length/2);
+    var half = Math.floor(arr.length/2); //
     if(arr.length % 2){
       return arr[half];
     }
@@ -71,6 +71,6 @@ module.exports = {
          mode = num;
       }
     });
-    return +mode; //
+    return +mode; 
   }
 };
