@@ -48,10 +48,7 @@ module.exports = {
     return result;
   },
   medianScore: function(arr){
-    arr.sort(function(a, b){
-      return a-b;
-      }
-    );
+    arr.sort();
     var half = Math.floor(arr.length/2); //
     if(arr.length % 2){
       return arr[half];
@@ -61,16 +58,16 @@ module.exports = {
     }
   },
   modeScore: function mode(arr){
-    var numMapping = {};
-    var greatestFreq = 0;
-    var mode;
-    arr.forEach(function findMode(num){
-      numMapping[num] = (numMapping[num] || 0) + 1;
-      if(greatestFreq < numMapping[num]){
-         greatestFreq = numMapping[num];
-         mode = num;
+    var numMapping = {}; //creates a new object
+    var greatestFreq = 0; // creates the counter/ticker
+    var mode;             // empty unassigned variable for later
+    arr.forEach(function findMode(num){  //running the function findMode  on each item in the array
+      numMapping[num] = (numMapping[num] || 0) + 1;//putting our number into object tallying/tracking freq occurs & and also setting counter to 1
+      if(greatestFreq < numMapping[num]){ //compare next tracked num to current
+         greatestFreq = numMapping[num];//if the next tracted num has more counts then it will be the new mode
+         mode = num;// setting the mode to the most tallied number
       }
     });
-    return +mode; 
+    return +mode; // the plus helps attempt to convert it to a number if someone passes in a string
   }
 };
